@@ -193,26 +193,15 @@ h1, h2, h3 { line-height: 1.2; }
 /* Diferenciais */
 .diferenciais {
   padding: 56px 0;
-  overflow: hidden;
-}
-.diferenciais-track {
   display: flex;
-  width: max-content;
-  animation: marquee-diferenciais 32s linear infinite;
+  justify-content: center;
 }
-.diferenciais-grupo {
-  display: flex;
-  gap: 72px;
-  padding: 0 36px;
+.diferenciais .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
 }
-@keyframes marquee-diferenciais {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .diferenciais-track { animation: none; }
-}
-.diferencial-item { text-align: center; width: 230px; flex-shrink: 0; }
+.diferencial-item { text-align: center; }
 .diferencial-item .icon {
   width: 56px;
   height: 56px;
@@ -458,8 +447,7 @@ a.contato-chip:hover { background: rgba(255, 255, 255, 0.18); }
   .hero-text p { font-size: 1rem; }
 
   .diferenciais { padding: 40px 0; }
-  .diferenciais-grupo { gap: 40px; padding: 0 20px; }
-  .diferencial-item { width: 190px; }
+  .diferenciais .container { gap: 24px; }
 
   .servicos, .resultados, .depoimentos { padding: 40px 0; }
   .servicos h2, .resultados h2, .depoimentos h2 { font-size: 1.5rem; margin-bottom: 28px; }
