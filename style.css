@@ -201,7 +201,17 @@ h1, h2, h3 { line-height: 1.2; }
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 32px;
 }
-.diferencial-item { text-align: center; }
+.diferencial-item {
+  text-align: center;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 12px;
+  transition: background 0.2s, transform 0.2s;
+}
+.diferencial-item:hover {
+  background: var(--azul-claro);
+  transform: translateY(-4px);
+}
 .diferencial-item .icon {
   width: 56px;
   height: 56px;
@@ -239,7 +249,7 @@ h1, h2, h3 { line-height: 1.2; }
 }
 .servico-card h3 { margin-bottom: 8px; color: var(--azul-escuro); }
 .servico-card p { color: var(--texto-suave); margin-bottom: 12px; }
-.servico-card .saiba-mais {
+.saiba-mais {
   display: inline-block;
   color: var(--azul-piscina);
   font-weight: 600;
@@ -248,7 +258,8 @@ h1, h2, h3 { line-height: 1.2; }
   transform: translateX(-4px);
   transition: opacity 0.2s, transform 0.2s;
 }
-.servico-card:hover .saiba-mais { opacity: 1; transform: translateX(0); }
+.servico-card:hover .saiba-mais,
+.diferencial-item:hover .saiba-mais { opacity: 1; transform: translateX(0); }
 
 /* Modal de serviço */
 .modal-overlay {
@@ -458,7 +469,7 @@ a.contato-chip:hover { background: rgba(255, 255, 255, 0.18); }
 
   .contato-chip { width: 100%; max-width: 280px; }
 
-  .servico-card .saiba-mais { opacity: 1; transform: none; }
+  .saiba-mais { opacity: 1; transform: none; }
 }
 
 @media (max-width: 400px) {
