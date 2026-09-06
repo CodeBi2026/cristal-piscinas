@@ -69,7 +69,7 @@ h1, h2, h3 { line-height: 1.2; }
 .nav a:hover { transform: scale(1.12); color: var(--azul-piscina); }
 
 /* Hero */
-.hero { background: var(--azul-escuro); padding: 28px 0; }
+.hero { background: var(--azul-escuro); padding: 56px 0; }
 .hero-inner {
   display: flex;
   align-items: center;
@@ -80,14 +80,14 @@ h1, h2, h3 { line-height: 1.2; }
 .hero-text h1 { font-size: 2.4rem; margin-bottom: 16px; color: var(--branco); }
 .hero-text h1 span { color: var(--azul-destaque); }
 .hero-text p { color: #c3d3ef; margin-bottom: 24px; font-size: 1.1rem; }
-.hero-image { flex: 0 1 220px; max-width: 220px; position: relative; }
+.hero-image { flex: 0 1 380px; max-width: 380px; position: relative; }
 
 .selo-destaque {
   position: absolute;
-  bottom: -12px;
-  left: -12px;
-  width: 82px;
-  height: 82px;
+  bottom: -14px;
+  left: -14px;
+  width: 104px;
+  height: 104px;
   background: linear-gradient(135deg, #f7d774, #c99a1e);
   color: var(--azul-escuro);
   border-radius: 50%;
@@ -101,16 +101,16 @@ h1, h2, h3 { line-height: 1.2; }
   transform: rotate(-8deg);
   z-index: 2;
 }
-.selo-icone { font-size: 1.15rem; line-height: 1; }
+.selo-icone { font-size: 1.4rem; line-height: 1; }
 .selo-texto {
   font-weight: 800;
-  font-size: 0.56rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   line-height: 1.15;
   margin-top: 2px;
 }
 .selo-local {
-  font-size: 0.46rem;
+  font-size: 0.56rem;
   font-weight: 600;
   text-transform: uppercase;
   opacity: 0.85;
@@ -118,8 +118,8 @@ h1, h2, h3 { line-height: 1.2; }
 }
 
 .hero-image .foto-real {
-  aspect-ratio: 4 / 5;
-  object-position: top center;
+  aspect-ratio: 3 / 2;
+  object-position: center 30%;
 }
 
 .img-placeholder {
@@ -450,14 +450,14 @@ a.contato-chip:hover { background: rgba(255, 255, 255, 0.18); }
     padding: 12px 16px;
   }
   .logo img { height: 52px; }
-  .selo-destaque { width: 64px; height: 64px; left: 4px; bottom: 4px; }
-  .selo-icone { font-size: 0.9rem; }
-  .selo-texto { font-size: 0.44rem; }
-  .selo-local { font-size: 0.36rem; }
+  .selo-destaque { width: 76px; height: 76px; left: 6px; bottom: 6px; }
+  .selo-icone { font-size: 1rem; }
+  .selo-texto { font-size: 0.5rem; }
+  .selo-local { font-size: 0.42rem; }
   .nav { gap: 12px; font-size: 0.85rem; flex-wrap: wrap; justify-content: center; }
 
-  .hero { padding: 24px 0; }
-  .hero-image { max-width: 170px; }
+  .hero { padding: 40px 0; }
+  .hero-image { max-width: 260px; }
   .hero-inner { gap: 28px; }
   .hero-text h1 { font-size: 1.7rem; }
   .hero-text p { font-size: 1rem; }
