@@ -69,7 +69,7 @@ h1, h2, h3 { line-height: 1.2; }
 .nav a:hover { transform: scale(1.12); color: var(--azul-piscina); }
 
 /* Hero */
-.hero { background: var(--azul-escuro); padding: 64px 0; }
+.hero { background: var(--azul-escuro); padding: 44px 0; }
 .hero-inner {
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@ h1, h2, h3 { line-height: 1.2; }
 .hero-text h1 { font-size: 2.4rem; margin-bottom: 16px; color: var(--branco); }
 .hero-text h1 span { color: var(--azul-destaque); }
 .hero-text p { color: #c3d3ef; margin-bottom: 24px; font-size: 1.1rem; }
-.hero-image { flex: 1 1 300px; position: relative; }
+.hero-image { flex: 0 1 300px; max-width: 300px; position: relative; }
 
 .selo-destaque {
   position: absolute;
