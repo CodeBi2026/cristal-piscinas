@@ -67,25 +67,21 @@
     <div class="container">
       <h2>Serviços</h2>
       <div class="servicos-grid">
-        <div class="servico-card" data-servico="limpeza">
+        <div class="servico-card">
           <h3>Limpeza periódica</h3>
           <p>Aspiração, escovação e tratamento químico em visitas recorrentes.</p>
-          <span class="saiba-mais">Saiba mais →</span>
         </div>
-        <div class="servico-card" data-servico="recuperacao">
+        <div class="servico-card">
           <h3>Recuperação de piscina verde</h3>
           <p>Tratamento de choque e limpeza pesada pra voltar a usar rápido.</p>
-          <span class="saiba-mais">Saiba mais →</span>
         </div>
-        <div class="servico-card" data-servico="quimico">
+        <div class="servico-card">
           <h3>Tratamento químico</h3>
           <p>Medição de pH e cloro, ajuste na medida certa pra cada piscina.</p>
-          <span class="saiba-mais">Saiba mais →</span>
         </div>
-        <div class="servico-card" data-servico="equipamentos">
+        <div class="servico-card">
           <h3>Manutenção de equipamentos</h3>
           <p>Verificação de bomba, filtro e demais equipamentos do sistema.</p>
-          <span class="saiba-mais">Saiba mais →</span>
         </div>
       </div>
     </div>
@@ -147,14 +143,6 @@
     <img src="" alt="">
   </div>
 
-  <div class="modal-overlay" id="modalServico">
-    <div class="modal-box">
-      <button class="modal-close" aria-label="Fechar">&times;</button>
-      <h3 id="modalTitulo"></h3>
-      <p id="modalTexto"></p>
-    </div>
-  </div>
-
   <script>
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = lightbox.querySelector('img');
@@ -166,50 +154,8 @@
       });
     });
     lightbox.addEventListener('click', () => lightbox.classList.remove('aberto'));
-
-    const servicos = {
-      limpeza: {
-        titulo: 'Limpeza periódica — benefícios para a família',
-        texto: 'Uma piscina limpa não é só estética — é saúde e segurança pra sua família. A manutenção periódica evita o acúmulo de bactérias e fungos que causam alergias e infecções de pele e ouvido, principalmente em crianças. Água bem tratada também reduz a irritação nos olhos e nas vias respiratórias. E tem outro ganho: piscina sempre pronta pra uso significa mais momentos de lazer sem imprevistos, e evita o gasto grande de uma recuperação de piscina verde no futuro.'
-      },
-      recuperacao: {
-        titulo: 'Recuperação de piscina verde — curiosidades',
-        texto: 'Sabia que a piscina fica verde por causa de algas que se multiplicam rápido quando o cloro está baixo e a água pega muito sol? Em poucos dias, uma piscina impecável pode virar um caldo verde. A boa notícia é que, na maioria dos casos, não é preciso esvaziar nada: com um tratamento de choque bem aplicado, dá pra devolver a transparência da água em menos de 48 horas. Piscina parada e verde também é um dos ambientes preferidos pra proliferação de larvas de mosquito — mais um motivo pra agir rápido.'
-      },
-      quimico: {
-        titulo: 'Tratamento químico — curiosidades',
-        texto: 'O pH ideal da piscina fica entre 7.2 e 7.6 — bem próximo do pH natural dos olhos humanos, por isso água fora dessa faixa arde e resseca a pele. E cloro em excesso não é sinônimo de piscina mais limpa: aquele cheiro forte de cloro costuma indicar cloro combinado (sujo), e não cloro em excesso. Chuva, calor e número de banhistas mudam a química da água quase todo dia — por isso a medição constante faz toda a diferença.'
-      },
-      equipamentos: {
-        titulo: 'Manutenção de equipamentos — curiosidades',
-        texto: 'A bomba filtrante é o coração da piscina: o ideal é que ela circule toda a água pelo menos uma vez a cada 8 horas pra manter a limpeza em dia. Filtro sujo força o motor a trabalhar mais, aumenta o consumo de energia e reduz a vida útil do equipamento. Uma limpeza preventiva simples do filtro evita trocas caras de bomba e prolonga a vida do sistema em vários anos.'
-      }
-    };
-
-    const modal = document.getElementById('modalServico');
-    const modalTitulo = document.getElementById('modalTitulo');
-    const modalTexto = document.getElementById('modalTexto');
-
-    document.querySelectorAll('.servico-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const dados = servicos[card.dataset.servico];
-        if (!dados) return;
-        modalTitulo.textContent = dados.titulo;
-        modalTexto.textContent = dados.texto;
-        modal.classList.add('aberto');
-      });
-    });
-    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('aberto'); });
-    document.querySelectorAll('.modal-close').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.closest('.modal-overlay, .lightbox').classList.remove('aberto');
-      });
-    });
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        lightbox.classList.remove('aberto');
-        modal.classList.remove('aberto');
-      }
+      if (e.key === 'Escape') lightbox.classList.remove('aberto');
     });
   </script>
 

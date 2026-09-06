@@ -230,60 +230,9 @@ h1, h2, h3 { line-height: 1.2; }
   padding: 24px;
   border-radius: 12px;
   box-shadow: var(--sombra);
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.servico-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 32px rgba(11, 42, 110, 0.22);
 }
 .servico-card h3 { margin-bottom: 8px; color: var(--azul-escuro); }
-.servico-card p { color: var(--texto-suave); margin-bottom: 12px; }
-.servico-card .saiba-mais {
-  display: inline-block;
-  color: var(--azul-piscina);
-  font-weight: 600;
-  font-size: 0.9rem;
-  opacity: 0;
-  transform: translateX(-4px);
-  transition: opacity 0.2s, transform 0.2s;
-}
-.servico-card:hover .saiba-mais { opacity: 1; transform: translateX(0); }
-
-/* Modal de serviço */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(11, 42, 110, 0.55);
-  z-index: 100;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-}
-.modal-overlay.aberto { display: flex; }
-.modal-box {
-  background: var(--branco);
-  border-radius: 16px;
-  padding: 32px;
-  max-width: 480px;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-.modal-box h3 { color: var(--azul-escuro); margin-bottom: 14px; padding-right: 24px; }
-.modal-box p { color: var(--texto-suave); line-height: 1.6; }
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  background: none;
-  border: none;
-  color: var(--texto-suave);
-  font-size: 1.8rem;
-  line-height: 1;
-  cursor: pointer;
-}
+.servico-card p { color: var(--texto-suave); }
 
 /* Resultados */
 .resultados { padding: 56px 0; }
@@ -422,8 +371,6 @@ a.contato-chip:hover { background: rgba(255, 255, 255, 0.18); }
   .btn-whatsapp { padding: 14px 24px; font-size: 1rem; }
 
   .contato-chip { width: 100%; max-width: 280px; }
-
-  .servico-card .saiba-mais { opacity: 1; transform: none; }
 }
 
 @media (max-width: 400px) {
