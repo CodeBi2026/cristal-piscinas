@@ -12,9 +12,13 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   color: var(--texto);
   line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 .container {
@@ -340,6 +344,13 @@ h1, h2, h3 { line-height: 1.2; }
 }
 .depoimento-card p { font-style: italic; margin-bottom: 12px; }
 .depoimento-card span { color: var(--azul-piscina); font-weight: 600; }
+.depoimento-card .estrelas {
+  display: block;
+  color: #f5b400;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
 
 .depoimentos-dots {
   display: flex;
@@ -399,6 +410,36 @@ h1, h2, h3 { line-height: 1.2; }
   100% { box-shadow: var(--sombra), 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
+/* WhatsApp flutuante */
+.whatsapp-flutuante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  color: var(--branco);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  z-index: 50;
+  transition: transform 0.2s;
+  animation: pulso-whatsapp 2.2s infinite;
+}
+.whatsapp-flutuante:hover { transform: scale(1.08); }
+.whatsapp-flutuante svg { width: 30px; height: 30px; }
+
+/* Mapa de atendimento */
+.mapa-area {
+  margin-top: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+.mapa-area iframe { display: block; }
+
 .contato-links {
   display: flex;
   flex-wrap: wrap;
@@ -433,6 +474,20 @@ a.contato-chip:hover { background: rgba(255, 255, 255, 0.18); }
 }
 .contato-chip-instagram svg { color: var(--branco); }
 .contato-chip-instagram:hover { filter: brightness(1.1); background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+/* Animação de entrada ao rolar */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
 
 /* Footer */
 .footer {
@@ -475,6 +530,9 @@ a.contato-chip:hover { background: rgba(255, 255, 255, 0.18); }
   .contato-chip { width: 100%; max-width: 280px; }
 
   .saiba-mais { opacity: 1; transform: none; }
+
+  .whatsapp-flutuante { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+  .whatsapp-flutuante svg { width: 26px; height: 26px; }
 }
 
 @media (max-width: 400px) {
