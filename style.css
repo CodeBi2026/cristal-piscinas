@@ -76,8 +76,42 @@ h1, h2, h3 { line-height: 1.2; }
 .hero-text h1 { font-size: 2.4rem; margin-bottom: 16px; color: var(--branco); }
 .hero-text h1 span { color: var(--azul-destaque); }
 .hero-text p { color: #c3d3ef; margin-bottom: 24px; font-size: 1.1rem; }
-.hero-stat { color: var(--branco) !important; font-weight: 600; font-size: 1rem !important; }
-.hero-image { flex: 1 1 300px; }
+.hero-image { flex: 1 1 300px; position: relative; }
+
+.selo-destaque {
+  position: absolute;
+  bottom: -16px;
+  left: -16px;
+  width: 112px;
+  height: 112px;
+  background: linear-gradient(135deg, #f7d774, #c99a1e);
+  color: var(--azul-escuro);
+  border-radius: 50%;
+  border: 3px solid var(--branco);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(-8deg);
+  z-index: 2;
+}
+.selo-icone { font-size: 1.5rem; line-height: 1; }
+.selo-texto {
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin-top: 2px;
+}
+.selo-local {
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-top: 2px;
+}
 
 .hero-image .foto-real {
   aspect-ratio: 4 / 5;
@@ -196,6 +230,7 @@ h1, h2, h3 { line-height: 1.2; }
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
+.resultados-grid .foto-real { aspect-ratio: 3 / 4; }
 
 /* Depoimentos */
 .depoimentos { background: var(--azul-claro); padding: 56px 0; }
@@ -302,6 +337,10 @@ a.contato-chip:hover { background: rgba(255, 255, 255, 0.18); }
     padding: 12px 16px;
   }
   .logo img { height: 52px; }
+  .selo-destaque { width: 84px; height: 84px; left: 4px; bottom: 4px; }
+  .selo-icone { font-size: 1.1rem; }
+  .selo-texto { font-size: 0.58rem; }
+  .selo-local { font-size: 0.48rem; }
   .nav { gap: 12px; font-size: 0.85rem; flex-wrap: wrap; justify-content: center; }
 
   .hero { padding: 40px 0; }
