@@ -25,7 +25,7 @@
     <div class="container hero-inner">
       <div class="hero-text">
         <h1>Sua piscina limpa <span>o ano todo</span>, sem dor de cabeça</h1>
-        <p>Manutenção e limpeza de piscinas em Lagoa Santa e região, com atendimento ágil e transparente em cada visita.</p>
+        <p>Manutenção e limpeza de piscinas em Lagoa Santa e região, respeito e compromisso com o cliente.</p>
         <p class="hero-stat">✔️ Mais de 20 clientes ativos confiam no serviço</p>
       </div>
       <div class="hero-image">
@@ -98,14 +98,17 @@
     <div class="container">
       <h2>O que os clientes dizem</h2>
       <div class="depoimentos-grid">
-        <!-- placeholders: depoimentos reais (Google, WhatsApp, Instagram) -->
         <div class="depoimento-card">
-          <p>"Depoimento real do cliente entra aqui."</p>
-          <span>— Nome do cliente</span>
+          <p>"Antes eu passava horas esfregando piscina e tentando acertar a quantidade de cloro, era um estresse. Contratei a Cristal Piscinas e mudou minha rotina. Agora a água tá sempre boa pra uso, transparente igual espelho, e eu só me preocupo em curtir rsrs. Excelente atendimento pelo Leo!"</p>
+          <span>— Ricardo M., Cliente há 4 meses</span>
         </div>
         <div class="depoimento-card">
-          <p>"Depoimento real do cliente entra aqui."</p>
-          <span>— Nome do cliente</span>
+          <p>"O técnico da Cristal é extremamente pontual e caprichoso. Tenho animais em casa e sempre me preocupava com os produtos que usavam na área externa, mas a equipe é super cuidadosa e me explicou todo o processo. Água cristalina de verdade e atendimento nota 10."</p>
+          <span>— Fernanda S., Cliente há 2 meses</span>
+        </div>
+        <div class="depoimento-card">
+          <p>"Voltei de viagem e minha piscina parecia um lago de sapo, totalmente verde. Chamei a Cristal Piscinas e em menos de 48 horas eles recuperaram a água sem eu precisar esvaziar. Parecia mágica! O trabalho deles é impecável."</p>
+          <span>— Marcos T., Cliente pontual</span>
         </div>
       </div>
     </div>
@@ -131,6 +134,23 @@
     </div>
   </footer>
 
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Fechar">&times;</button>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.foto-real').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('aberto');
+      });
+    });
+    lightbox.addEventListener('click', () => lightbox.classList.remove('aberto'));
+  </script>
 
 </body>
 </html>
