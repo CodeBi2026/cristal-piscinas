@@ -11,6 +11,13 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   color: var(--texto);
@@ -518,10 +525,13 @@ a.contato-chip:hover { background: rgba(255, 255, 255, 0.18); }
   .hero-text p { font-size: 1rem; }
 
   .diferenciais { padding: 40px 0; }
-  .diferenciais .container { gap: 24px; }
+  .diferenciais .container { grid-template-columns: 1fr; gap: 20px; }
 
   .servicos, .galeria, .depoimentos { padding: 40px 0; }
   .servicos h2, .galeria h2, .depoimentos h2 { font-size: 1.5rem; margin-bottom: 28px; }
+  .servicos-grid { grid-template-columns: 1fr; gap: 16px; }
+
+  .galeria-grid { grid-template-columns: repeat(2, 1fr); }
 
   .contato { padding: 48px 0; }
   .contato h2 { font-size: 1.5rem; }
