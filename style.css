@@ -212,17 +212,7 @@ h1, h2, h3 { line-height: 1.2; }
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 32px;
 }
-.diferencial-item {
-  text-align: center;
-  cursor: pointer;
-  padding: 12px;
-  border-radius: 12px;
-  transition: background 0.2s, transform 0.2s;
-}
-.diferencial-item:hover {
-  background: var(--azul-claro);
-  transform: translateY(-4px);
-}
+.diferencial-item { text-align: center; }
 .diferencial-item .icon {
   width: 56px;
   height: 56px;
@@ -269,8 +259,7 @@ h1, h2, h3 { line-height: 1.2; }
   transform: translateX(-4px);
   transition: opacity 0.2s, transform 0.2s;
 }
-.servico-card:hover .saiba-mais,
-.diferencial-item:hover .saiba-mais { opacity: 1; transform: translateX(0); }
+.servico-card:hover .saiba-mais { opacity: 1; transform: translateX(0); }
 
 /* Modal de serviço */
 .modal-overlay {

@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -55,29 +55,25 @@
 
   <section id="diferenciais" class="diferenciais">
     <div class="container reveal">
-      <div class="diferencial-item" data-diferencial="confianca">
+      <div class="diferencial-item">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div>
         <h3>Confiança de vários clientes</h3>
         <p>Atendimento sério, direto e sem enrolação — quem usa, continua usando.</p>
-        <span class="saiba-mais">Saiba mais →</span>
       </div>
-      <div class="diferencial-item" data-diferencial="agilidade">
+      <div class="diferencial-item">
         <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></div>
         <h3>Agilidade no atendimento</h3>
         <p>Recuperação de piscina verde e limpeza pesada com prazo combinado e cumprido.</p>
-        <span class="saiba-mais">Saiba mais →</span>
       </div>
-      <div class="diferencial-item" data-diferencial="transparencia">
+      <div class="diferencial-item">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
         <h3>Transparência</h3>
         <p>Você sabe exatamente o que foi feito e por quê, a cada visita.</p>
-        <span class="saiba-mais">Saiba mais →</span>
       </div>
-      <div class="diferencial-item" data-diferencial="preco">
+      <div class="diferencial-item">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 16 16 8M9 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm6 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/></svg></div>
         <h3>Preço competitivo</h3>
         <p>Qualidade de serviço sem pesar no bolso.</p>
-        <span class="saiba-mais">Saiba mais →</span>
       </div>
     </div>
   </section>
@@ -225,25 +221,6 @@
       }
     };
 
-    const diferenciais = {
-      confianca: {
-        titulo: 'Confiança de vários clientes',
-        texto: 'A confiança vem do dia a dia: atendimento sério, pontual e sem enrolação. Boa parte dos nossos clientes chega por indicação de quem já usa o serviço — e continua usando mês após mês. Isso mostra que entregamos exatamente o combinado, sem surpresa e sem letra miúda.'
-      },
-      agilidade: {
-        titulo: 'Agilidade no atendimento',
-        texto: 'Piscina virou um problema? Recuperação de piscina verde e limpezas pesadas têm prazo combinado e cumprido, sem enrolação. Você sabe exatamente quando vai poder usar a piscina de novo — e a gente cumpre esse prazo.'
-      },
-      transparencia: {
-        titulo: 'Transparência',
-        texto: 'Você não precisa adivinhar o que foi feito na sua piscina. A cada visita, ficam claros os produtos aplicados, o nível de pH e cloro medido, e por que aquele ajuste foi necessário. Nada de serviço genérico — cada visita tem explicação.'
-      },
-      preco: {
-        titulo: 'Preço competitivo',
-        texto: 'Serviço de qualidade não precisa custar caro. Trabalhamos com preços justos pra região de Lagoa Santa, sem empurrar pacote que você não precisa — você paga pelo que realmente é feito na sua piscina.'
-      }
-    };
-
     const modal = document.getElementById('modalServico');
     const modalTitulo = document.getElementById('modalTitulo');
     const modalTexto = document.getElementById('modalTexto');
@@ -251,15 +228,6 @@
     document.querySelectorAll('.servico-card').forEach(card => {
       card.addEventListener('click', () => {
         const dados = servicos[card.dataset.servico];
-        if (!dados) return;
-        modalTitulo.textContent = dados.titulo;
-        modalTexto.textContent = dados.texto;
-        modal.classList.add('aberto');
-      });
-    });
-    document.querySelectorAll('.diferencial-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const dados = diferenciais[item.dataset.diferencial];
         if (!dados) return;
         modalTitulo.textContent = dados.titulo;
         modalTexto.textContent = dados.texto;
